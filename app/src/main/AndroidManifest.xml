@@ -23,12 +23,20 @@
         <activity android:name=".MainActivityLogin">
 
         </activity>
-        <activity android:name=".ActivityHome" />
+        <activity android:name=".ActivityHome">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".ForgetPassword" />
         <activity android:name=".SignUp" />
         <activity android:name=".Activity_editdata" />
         <activity android:name=".Activity_Add" />
-        <activity android:name=".ActivityUpdate" />
+        <activity android:name=".ActivityUpdate">
+
+        </activity>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyD-8D8G_ynu-sPJfIjFxM0yeqouO2yRNCw" />
@@ -39,13 +47,7 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:label="@string/title_activity_maps"></activity>
     </application>
 
 </manifest>

@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -40,6 +41,7 @@ private FirebaseAuth auth;
         auth = FirebaseAuth.getInstance();
         if (auth.getCurrentUser()!=null){
             startActivity(new Intent(MainActivityLogin.this, ActivityHome.class));
+            Log.d("MYLOG", "AUTH NOT NULL");
         }
     }
 
@@ -57,10 +59,12 @@ private FirebaseAuth auth;
         }else if (view.getId() == R.id.btnLogi)
         {
             loginUser(input_email.getText().toString(),input_password.getText().toString());
+            Log.d("MYLOG", "CLICK!!!");
         }
     }
 
     private void loginUser(String email, final String password) {
+        Log.d("MYLOG", "INTRO LOGINUSER");
         auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -70,10 +74,13 @@ private FirebaseAuth auth;
                             {
                                 Snackbar snackbar = Snackbar.make(layout_login,"Password length must br over 6",Snackbar.LENGTH_SHORT);
                                 snackbar.show();
+                            }else {
+                                Log.d("MYLOG", "WHAT!!!");
                             }
                         }
                         else {
                             startActivity(new Intent(MainActivityLogin.this,ActivityHome.class));
+                            Log.d("MYLOG", "LETS GO!!!");
                         }
                     }
                 });
