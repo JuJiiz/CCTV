@@ -11,12 +11,12 @@ public class Data_CCTV {
     String dataAddress;
     String dataOwner;
     String dataNumber;
-    double dataLat;
-    double dataLng;
+    String dataLat;
+    String dataLng;
     String dataType;
     public Data_CCTV(){}
 
-    public Data_CCTV(String dataId, String dataName, String dataAddress, String dataOwner, String dataNumber, double dataLat, double dataLng, String dataType) {
+    public Data_CCTV(String dataId, String dataName, String dataAddress, String dataOwner, String dataNumber, String dataLat, String dataLng, String dataType) {
         this.dataId = dataId;
         this.dataName = dataName;
         this.dataAddress = dataAddress;
@@ -47,11 +47,11 @@ public class Data_CCTV {
         return dataNumber;
     }
 
-    public double getDataLat() {
+    public String getDataLat() {
         return dataLat;
     }
 
-    public double getDataLng() {
+    public String getDataLng() {
         return dataLng;
     }
 
@@ -79,11 +79,11 @@ public class Data_CCTV {
         this.dataNumber = dataNumber;
     }
 
-    public void setDataLat(double dataLat) {
+    public void setDataLat(String dataLat) {
         this.dataLat = dataLat;
     }
 
-    public void setDataLng(double dataLng) {
+    public void setDataLng(String dataLng) {
         this.dataLng = dataLng;
     }
 

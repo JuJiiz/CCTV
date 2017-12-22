@@ -48,13 +48,15 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     Marker marker;//option Marker of database
     ArrayList<HashMap<String, String>> alMultiLocation = new ArrayList<HashMap<String, String>>();
     HashMap<String, String> hmLocation;
+    LatLng location;
+    Data_CCTV Mydata;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
-        mdata = FirebaseDatabase.getInstance().getReference("dataCCtv");
+        mdata = FirebaseDatabase.getInstance().getReference();
         mdata.push().setValue(marker);
 
         GoogleApiAvailability gAPI = GoogleApiAvailability.getInstance();
@@ -138,9 +140,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot s : dataSnapshot.getChildren()){
-                    Data_CCTV Mydata = s.getValue(Data_CCTV.class);
-                    LatLng location = new LatLng(Mydata.dataLat,Mydata.dataLng);
-                    mMap.addMarker(new MarkerOptions().position(location).title(Mydata.dataName)).setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
+                    Mydata = s.getValue(Data_CCTV.class);
+                    if(Mydata.dataLat!=null&&Mydata.dataLng!=null){
+                        double dLat = Double.valueOf(Mydata.dataLat.trim()).doubleValue();
+                        double dLng = Double.valueOf(Mydata.dataLng.trim()).doubleValue();
+                        location = new LatLng(dLat,dLng);
+                        mMap.addMarker(new MarkerOptions().position(location).title(Mydata.dataName)).setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
+                    }
                 }
             }
 

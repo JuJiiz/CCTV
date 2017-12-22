@@ -77,13 +77,15 @@ public class Activity_Add extends AppCompatActivity implements GoogleApiClient.C
         String num = numtype.getText().toString().trim();
         String Owner = Ownertype.getText().toString().trim();
         String Address = TxvAddress.getText().toString().trim();
-        double lat = Double.parseDouble(latt.getText().toString().trim());
-        double lng = Double.parseDouble(lngg.getText().toString().trim());
+        //double lat = Double.parseDouble(latt.getText().toString().trim());
+        String sLat = latt.getText().toString().trim();
+        //double lng = Double.parseDouble(lngg.getText().toString().trim());
+        String sLng = lngg.getText().toString().trim();
         String typec = type.getSelectedItem().toString();
 
         if (!TextUtils.isEmpty(name)) {
             String id = databaseCCTV.push().getKey();
-            Data_CCTV data_cctvs = new Data_CCTV(id, name, num, Owner, Address, lat, lng, typec);
+            Data_CCTV data_cctvs = new Data_CCTV(id, name, num, Owner, Address, sLat, sLng, typec);
             databaseCCTV.child(id).setValue(data_cctvs);
             Toast.makeText(this, "Complete", Toast.LENGTH_LONG).show();
         } else {
