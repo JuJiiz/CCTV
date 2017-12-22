@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.maximum191.cctvapp.ActivityProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#ABD6BB"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/policeman"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="85dp" />
+
+
+
+
+    <TextView
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:text="Name: "
+    android:textSize="18dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignStart="@+id/position" />
+    <TextView
+        android:id="@+id/showname"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="18dp"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="49dp" />
+    <TextView
+        android:id="@+id/position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="40dp"
+        android:text="Position: "
+        android:textSize="18dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/showposition"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="18dp"
+        android:layout_alignBaseline="@+id/position"
+        android:layout_alignBottom="@+id/position"
+        android:layout_toEndOf="@+id/position"
+        android:layout_marginStart="11dp" />
+    <TextView
+        android:id="@+id/eMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="40dp"
+        android:text="Email: "
+        android:textSize="18dp"
+        android:layout_below="@+id/position"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/showMail"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="18dp"
+        android:layout_alignBaseline="@+id/eMail"
+        android:layout_alignBottom="@+id/eMail"
+        android:layout_toEndOf="@+id/eMail"
+        android:layout_marginStart="11dp" />
+
+    <Button
+        android:id="@+id/buttonupdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/eMail"
+        android:layout_marginBottom="67dp"
+        android:background="@drawable/btn_okup"
+        android:layout_marginStart="25dp"
+        android:text="Update Profile" />
+
+    <Button
+        android:id="@+id/buttonBackhome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/buttonupdate"
+        android:background="@drawable/bg_edit"
+        android:layout_alignEnd="@+id/showname"
+        android:text="Back" />
+
+
+</RelativeLayout>

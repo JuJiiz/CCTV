@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.maximum191.cctvapp.ActivityHome">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10"
+        tools:context="com.example.maximum191.cctv.MainActivity_Home"
+        android:background="@drawable/bg_home"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_weight="3"
+        android:background="@drawable/bgpic_home">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/cctv" />
+
+        <TextView
+            android:id="@+id/tv_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="FICK"
+            android:textColor="#fff"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp" />
+
+    </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnuser"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/tv_home"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/btn_corner"
+            android:drawableLeft="@drawable/user1"
+            android:onClick="OnUser"
+            android:text="@string/title_home"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/add_home"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/btn_corner"
+            android:drawableLeft="@drawable/place"
+            android:text="@string/title_dashboard"
+            android:textSize="20dp" />
+
+        <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/add_home"
+        android:layout_centerHorizontal="true"
+        android:layout_columnWeight="2"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_corner"
+        android:drawableLeft="@drawable/edit"
+        android:text="@string/title_edit"
+        android:textSize="20dp" />
+    <Button
+        android:id="@+id/btnsea"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/add_home"
+        android:layout_centerHorizontal="true"
+        android:layout_columnWeight="2"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_corner"
+        android:drawableLeft="@drawable/search"
+        android:text="@string/title_notifications"
+        android:textSize="20dp" />
+    <Button
+        android:id="@+id/btnout"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/add_home"
+        android:layout_centerHorizontal="true"
+        android:layout_columnWeight="2"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_corner"
+        android:drawableLeft="@drawable/logout"
+        android:text="@string/title_logout"
+        android:textSize="20dp" />
+        </LinearLayout>
+
+
+
+</RelativeLayout>

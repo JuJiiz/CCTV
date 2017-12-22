@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.maximum191.cctvapp.Activity_Add"
+    android:background="@drawable/bgpic_home"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="50dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/add_point"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:text="@string/title_dashboard"
+            android:textColor="@android:color/black"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/name_upet"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/btn_corner"
+            android:gravity="center"
+            android:hint="@string/n_name" />
+
+        <EditText
+            android:id="@+id/owner_upet"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_corner"
+            android:gravity="center"
+            android:hint="@string/n_owner" />
+        <EditText
+            android:id="@+id/num_upet"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_corner"
+            android:hint="@string/n_num"
+            android:gravity="center"
+            />
+
+
+        <EditText
+            android:id="@+id/address_upet"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_corner"
+            android:gravity="center"
+            android:hint="@string/n_address" />
+
+        <Spinner
+            android:id="@+id/Type_upt"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:entries="@array/typeCCTV"
+            android:gravity="center" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Coordinates :"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/latti"
+            android:layout_marginTop="4dp"
+            android:layout_width="210dp"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:textColor="#000"
+            android:gravity="center"
+            android:text=""
+            android:layout_gravity="center"
+            android:textSize="13sp"
+            />
+
+        <EditText
+            android:id="@+id/lgti"
+            android:layout_width="210dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text=""
+            android:padding="5dp"
+            android:textColor="#000"
+            android:textSize="13sp"
+            />
+
+        <Button
+            android:id="@+id/ok_add"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_okup"
+            android:text="@string/n_ok"
+            android:textSize="20dp"
+            />
+    </LinearLayout>
+
+</ScrollView>

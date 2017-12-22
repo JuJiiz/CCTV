@@ -1,0 +1,37 @@
+<resources>
+    <array name="typeCCTV">
+        <item>CCTV</item>
+        <item>Zone 4</item>
+    </array>
+    <string name="app_name">FICK</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="title_home">ข้อมูลผู้ใช้</string>
+    <string name="title_dashboard">เพิ่มตำแหน่งกล้อง</string>
+    <string name="title_notifications">ค้นหาตำแหน่งกล้อง</string>
+    <string name="title_logout">ออกจากระบบ</string>
+    <string name="title_edit">แก้ไขข้อมูล</string>
+    <string name="n_num">จำนวนกล้อง</string>
+    <string name="n_Type">ประเภทกล้อง(ภาค4/CCTV)</string>
+    <string name="setting">ตั้งค่า</string>
+    <string name="n_name">ชื่อที่ตั้งกล้องวงจรปิด</string>
+    <string name="n_owner">เจ้าของกล้องวงจรปิด</string>
+    <string name="n_address">ที่อยู่</string>
+    <string name="n_ok">ยืนยัน</string>
+    <string name="ed_number">หมายเลข:  </string>
+    <string name="ed_name">ที่ตั้ง:  </string>
+    <string name="ed_type">ประเภทกล้อง:  </string>
+    <string name="ed_address">ที่อยู่:  </string>
+    <string name="ed_owner">เจ้าของกล้อง:  </string>
+    <string name="ed_num">จำนวนกล้อง:  </string>
+    <string name="ed_edit">แก้ไขข้อมูล</string>
+    <string name="ed_Delete">ลบข้อมูล</string>
+    <string name="up_update">อัพเดพข้อมูลกล้องวงจรปิด</string>
+    <string name="maps2">ชนิดของแผนที่...</string>
+    <string name="status">ใช้งานได้ปกติ</string>
+    <string name="status1">ไม่สามารถใช้งานได้</string>
+    <string name="sreach">ค้นหา</string>
+    <string name="ckin">เช็คอิน</string>
+    <string name="intro_text">Long click to exit the map.</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="show_data">Data List</string>
+</resources>

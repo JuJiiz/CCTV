@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.maximum191.cctvapp.Activity_editdata"
+    android:background="@drawable/bgpic_home"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="50dp"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:id="@+id/edit_point"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:text="@string/title_edit"
+            android:textColor="@android:color/black"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/name_edit"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_corner"
+            android:gravity="center"
+            android:hint="@string/n_name" />
+
+        <EditText
+            android:id="@+id/owner_edit"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/btn_corner"
+            android:gravity="center"
+            android:hint="@string/n_owner" />
+        <EditText
+            android:id="@+id/num_edit"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/btn_corner"
+            android:hint="@string/n_num"
+            android:gravity="center"
+            />
+
+        <Spinner
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:entries="@array/typeCCTV"
+            android:gravity="center"
+            android:id="@+id/Type_edit"/>
+
+        <EditText
+            android:id="@+id/address_edit"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/btn_corner"
+            android:gravity="center"
+            android:hint="@string/n_address"
+            />
+
+        <Button
+            android:id="@+id/ok_edit"
+            android:layout_width="230dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/backgroup_btnhome"
+            android:text="@string/n_ok"
+            android:textStyle="bold"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+
+</ScrollView>
