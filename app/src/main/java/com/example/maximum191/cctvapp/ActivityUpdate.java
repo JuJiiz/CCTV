@@ -1,13 +1,17 @@
 package com.example.maximum191.cctvapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
@@ -23,7 +27,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class ActivityUpdate extends AppCompatActivity {
+public class ActivityUpdate extends AppCompatActivity implements AdapterView.OnItemClickListener {
     private ListView recyclerView;
     private List<Data_CCTV> result;
     private DataAdapter adapter;
@@ -31,11 +35,13 @@ public class ActivityUpdate extends AppCompatActivity {
     private DatabaseReference reference;
     Data_CCTV Mydata;
     String mName = "name", xName;
-    String mAddress = "address",xAddress;
-    String mOwner = "owner",xOwner;
-    String mType = "type",xType;
-    ArrayList<HashMap<String, String>> LIST = new ArrayList<HashMap<String, String>>();;
+    String mAddress = "address", xAddress;
+    String mOwner = "owner", xOwner;
+    String mType = "type", xType;
+    ArrayList<HashMap<String, String>> LIST = new ArrayList<HashMap<String, String>>();
+    ;
     HashMap<String, String> temp;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +53,7 @@ public class ActivityUpdate extends AppCompatActivity {
         result = new ArrayList<>();
 
         recyclerView = (ListView) findViewById(R.id.data_list);
+        recyclerView.setOnItemClickListener(this);
         //recyclerView.setHasFixedSize(true);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
@@ -86,6 +93,16 @@ public class ActivityUpdate extends AppCompatActivity {
         });
 
         updateList();
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        HashMap<String, String> Item = (HashMap<String, String>) recyclerView.getItemAtPosition(position);
+        String SelectedTaskItem = Item.get(mName).toString();
+        //Log.d("MYLOG", "SelectedTaskItem: "+SelectedTaskItem);
+        intent = new Intent(getApplicationContext(), Activity_editdata.class);
+        intent.putExtra("cName", SelectedTaskItem);
+        startActivity(intent);
     }
 
     @Override

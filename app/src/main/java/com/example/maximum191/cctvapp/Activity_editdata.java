@@ -6,15 +6,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class Activity_editdata extends AppCompatActivity {
     EditText nameedit,owneredit,numedit,addressedit;
     Spinner typeedit;
     Button btnokedit;
+    String cName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editdata);
+
+        cName = getIntent().getExtras().getString("cName");
 
         nameedit= (EditText)findViewById(R.id.name_edit);
         owneredit = (EditText)findViewById(R.id.owner_edit);
